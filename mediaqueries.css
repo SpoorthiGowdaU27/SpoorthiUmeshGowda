@@ -28,110 +28,81 @@ section {
 }
 
 .profile-image {
-  max-width: 0px; /* Set a maximum width for the image */
-  width: 0%; /* Make the image responsive */
+  max-width: 50px; /* Set a maximum width for the image in mobile view */
+  width: 100%; /* Make the image responsive */
   height: auto; /* Maintain aspect ratio */
   border-radius: 50%; /* Optional: make the image circular */
   margin-bottom: 10px; /* Space below the image */
 }
-/* General Styles for Mobile */
-@media  (min-width: 300px){
+
+/* Media Queries for Mobile Devices */
+@media (max-width: 599px) {
   .profile-image {
-  max-width: 50px; /* Set a maximum width for the image in mobile view */
-  width: 50%; /* Make the image responsive */
-  height: auto; /* Maintain aspect ratio */
-}
-}
-
-/* Media Queries for Larger Screens */
-
-/* Tablets and Small Desktops */
-@media (min-width: 300px) {
-  .profile-image {
-      max-width: 100px; /* Adjust size for tablets and small desktops */
-      width: auto; /* Reset width to auto for larger screens */
-  }
-}
-
-/* Desktops and Larger Screens */
-@media (min-width: 300px) {
-  .profile-image {
-      max-width: 150px; /* Adjust size for desktops */
-      width: auto; /* Reset width to auto for larger screens */
-  }
-}
-
-/* About Section */
-#about-section {
-  margin-bottom: 10px; /* Reduce space below about section */
-}
-
-/* Experience Section */
-#experience-section {
-  margin-bottom: 10px; /* Reduce space below experience section */
-}
-
-/* Projects Section */
-#projects-section {
-  margin-bottom: 10px; /* Reduce space below projects section */
-}
-
-/* Contact Section */
-#contact-section {
-  margin-bottom: 10px; /* Reduce space below contact section */
-}
-
-/* Footer Section */
-footer {
-  margin-top: 10px; /* Reduce space above footer */
-  text-align: center; /* Center footer text */
-}
-
-/* Media Queries for Larger Screens */
-
-/* Tablets and Small Desktops */
-@media (min-width: 600px) {
-  #desktop-nav {
-      display: flex; /* Ensure nav is a flex container */
-      flex-direction: row; /* Align items horizontally */
-      justify-content: space-between; /* Space between logo and links */
-  }
-
-  .nav-links {
-      display: flex; /* Ensure links are displayed in a row */
-      flex-direction: row; /* Align links horizontally */
-      gap: 2rem; /* Space between links */
+    max-width: 50px; /* Set a maximum width for the image in mobile view */
+    width: 50%; /* Make the image responsive */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Ensures the image covers its container, maintaining aspect ratio */
   }
 
   #profile {
-      flex-direction: row; /* Align profile elements side by side */
-      justify-content: center; /* Center items */
+    flex-direction: column; /* Stack profile elements vertically */
+    align-items: center; /* Center items */
+  }
+
+  section {
+    padding: 10px; /* Reduce padding for mobile */
+  }
+}
+
+/* Media Queries for Tablets and Small Desktops */
+@media (min-width: 600px) {
+  .profile-image {
+    max-width: 100px; /* Adjust size for tablets and small desktops */
+    width: auto; /* Reset width to auto for larger screens */
+  }
+
+  #profile {
+    flex-direction: row; /* Align profile elements side by side */
+    justify-content: center; /* Center items */
   }
 }
 
 /* Desktops and Larger Screens */
 @media (min-width: 900px) {
   section {
-      margin: 0 10rem; /* Increase margin for sections on larger screens */
+    margin: 0 10rem; /* Increase margin for sections on larger screens */
   }
 
   .profile-info {
-      max-width: 600px; /* Limit the width of profile info */
-      text-align: center; /* Center text in profile info */
+    max-width: 600px; /* Limit the width of profile info */
+    text-align: center; /* Center text in profile info */
   }
 }
 
 /* Large Desktops */
 @media (min-width: 1200px) {
   section {
-      margin: 0 15rem; /* Increase margin for larger screens */
+    margin: 0 15rem; /* Increase margin for larger screens */
   }
 
   h1 {
-      font-size: 2rem; /* Increase heading size for larger screens */
+    font-size: 2rem; /* Increase heading size for larger screens */
   }
 
   p {
-      font-size: 1.1rem; /* Increase paragraph size for larger screens */
+    font-size: 1.1rem; /* Increase paragraph size for larger screens */
   }
+}
+
+/* Other Sections */
+#about-section,
+#experience-section,
+#projects-section,
+#contact-section {
+  margin-bottom: 10px; /* Reduce space below sections */
+}
+
+footer {
+  margin-top: 10px; /* Reduce space above footer */
+  text-align: center; /* Center footer text */
 }
