@@ -1,94 +1,89 @@
-/* Media Queries for Responsive Design */
-
-/* General adjustments for smaller screens */
-@media (max-width: 1200px) {
-  #desktop-nav {
-    padding: 1rem; /* Reduce padding for smaller screens */
-  }
-
-  .logo {
-    font-size: 4rem; /* Decrease logo size */
-  }
-
-  section {
-    margin: 0 5rem; /* Reduce margin for sections */
-  }
+/* Reset default margins and paddings */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Ensure padding and border are included in element's total width and height */
 }
 
-/* Adjustments for tablets and smaller screens */
-@media (max-width: 900px) {
+/* General Styles for Mobile */
+body {
+  font-size: 16px; /* Base font size */
+  line-height: 1.5; /* Improve readability */
+}
+
+section {
+  margin: 0; /* Remove default margin */
+  padding: 20px 0; /* Adjust padding as needed */
+}
+
+/* Profile Section */
+#profile {
+  display: flex;
+  flex-direction: column; /* Stack profile elements vertically */
+  align-items: center; /* Center items */
+  margin-bottom: 10px; /* Reduce space below profile section */
+}
+
+.profile-image {
+  max-width: 100%; /* Responsive image */
+  height: auto; /* Maintain aspect ratio */
+}
+
+/* About Section */
+#about-section {
+  margin-bottom: 10px; /* Reduce space below about section */
+}
+
+/* Experience Section */
+#experience-section {
+  margin-bottom: 10px; /* Reduce space below experience section */
+}
+
+/* Projects Section */
+#projects-section {
+  margin-bottom: 10px; /* Reduce space below projects section */
+}
+
+/* Contact Section */
+#contact-section {
+  margin-bottom: 10px; /* Reduce space below contact section */
+}
+
+/* Footer Section */
+footer {
+  margin-top: 10px; /* Reduce space above footer */
+}
+
+/* Media Queries for Larger Screens */
+
+/* Tablets and Small Desktops */
+@media (min-width: 600px) {
   #desktop-nav {
-    flex-direction: column; /* Stack nav items vertically */
-    align-items: flex-start; /* Align items to the start */
+      flex-direction: row; /* Align items horizontally */
+      justify-content: space-between; /* Space between logo and links */
   }
 
   .nav-links {
-    gap: 1rem; /* Reduce gap between links */
-  }
-
-  .btn {
-    width: 100%; /* Make buttons full width */
+      flex-direction: row; /* Align links horizontally */
+      gap: 2rem; /* Space between links */
   }
 
   #profile {
-    flex-direction: column; /* Stack profile elements vertically */
-    align-items: center; /* Center items */
-  }
-
-  .about-pic {
-    width: 300px; /* Adjust about picture size */
-    height: 300px; /* Adjust about picture size */
-  }
-
-  .section-container {
-    flex-direction: column; /* Stack sections vertically */
+      flex-direction: row; /* Align profile elements side by side */
+      justify-content: center; /* Center items */
   }
 }
 
-/* Adjustments for mobile devices */
-@media (max-width: 600px) {
-  .nav-links {
-    flex-direction: column; /* Stack links vertically on small screens */
-    gap: 1rem; /* Space between links */
+/* Desktops and Larger Screens */
+@media (min-width: 900px) {
+  section {
+      margin: 0 10rem; /* Increase margin for sections on larger screens */
   }
+}
 
-  .contact-info-upper-container {
-    flex-direction: column; /* Stack contact info vertically */
-    align-items: center; /* Center items */
-  }
-
-  .contact-info-container {
-    width: 100%; /* Make contact info full width */
-    padding: 1rem; /* Adjust padding */
-  }
-
-  #contact-form {
-    padding: 1rem; /* Add padding to the form */
-  }
-
-  .section__text__p1,
-  .title {
-    font-size: 1.5rem; /* Adjust font size for smaller screens */
-  }
-
-  #projects .details-container {
-    width: 100%; /* Make project details full width */
-  }
-
-  #projects .article-container {
-    flex-direction: column; /* Stack articles vertically */
-    align-items: center; /* Center articles */
-  }
-
-  .experience-details-container {
-    width: 100%; /* Make experience details full width */
-  }
-
-  .about-details-container {
-    width: 100%; /* Make about details full width */
-  }
-
-  .arrow {
-    right: 1rem; /* Adjust arrow position */
+/* Large Desktops */
+@media (min-width: 1200px) {
+  section {
+      margin: 0 15rem; /* Increase margin for larger screens */
   }
 }
