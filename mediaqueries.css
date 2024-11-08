@@ -28,8 +28,8 @@ section {
 }
 
 .profile-image {
-  max-width: 50px; /* Set a maximum width for the image */
-  width: 50%; /* Make the image responsive */
+  max-width: 20px; /* Set a maximum width for the image */
+  width: 20%; /* Make the image responsive */
   height: auto; /* Maintain aspect ratio */
   border-radius: 50%; /* Optional: make the image circular */
   margin-bottom: 10px; /* Space below the image */
