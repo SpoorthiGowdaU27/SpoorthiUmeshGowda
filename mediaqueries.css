@@ -35,16 +35,18 @@ section {
   margin-bottom: 10px; /* Space below the image */
 }
 /* General Styles for Mobile */
-.profile-image {
+@media  (min-width: 300px){
+  .profile-image {
   max-width: 50px; /* Set a maximum width for the image in mobile view */
   width: 50%; /* Make the image responsive */
   height: auto; /* Maintain aspect ratio */
+}
 }
 
 /* Media Queries for Larger Screens */
 
 /* Tablets and Small Desktops */
-@media (min-width: 600px) {
+@media (min-width: 300px) {
   .profile-image {
       max-width: 100px; /* Adjust size for tablets and small desktops */
       width: auto; /* Reset width to auto for larger screens */
@@ -52,7 +54,7 @@ section {
 }
 
 /* Desktops and Larger Screens */
-@media (min-width: 900px) {
+@media (min-width: 300px) {
   .profile-image {
       max-width: 150px; /* Adjust size for desktops */
       width: auto; /* Reset width to auto for larger screens */
