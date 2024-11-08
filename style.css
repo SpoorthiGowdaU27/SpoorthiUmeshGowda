@@ -112,8 +112,8 @@ p {
   animation: smoothTyping 4s forwards; /* Smooth typing effect without steps */
 }
 .profile-image {
-  max-width: 500px;  /* The maximum width the image can take */
-  max-height: 500px; /* The maximum height */
+  max-width: 100px;  /* The maximum width the image can take */
+  max-height: 100px; /* The maximum height */
   width: 100%; /* Makes it responsive */
   height: auto;  /* Maintains aspect ratio */
 }
