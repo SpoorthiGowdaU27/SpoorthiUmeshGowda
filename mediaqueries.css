@@ -7,12 +7,15 @@
 
 /* General Styles for Mobile */
 body {
+  font-family: Arial, sans-serif; /* Set a default font for better readability */
   font-size: 16px; /* Base font size */
   line-height: 1.5; /* Improve readability */
+  background-color: #f9f9f9; /* Light background for better contrast */
+  color: #333; /* Dark text color */
 }
 
 section {
-  margin: 10; /* Remove default margin */
+  margin: 0; /* Remove default margin */
   padding: 20px 0; /* Adjust padding as needed */
 }
 
@@ -21,12 +24,15 @@ section {
   display: flex;
   flex-direction: column; /* Stack profile elements vertically */
   align-items: center; /* Center items */
-  margin-bottom: 1px; /* Reduce space below profile section */
+  margin-bottom: 10px; /* Reduce space below profile section */
 }
 
 .profile-image {
-  max-width: 50%; /* Responsive image */
+  max-width: 150px; /* Set a maximum width for the image */
+  width: 100%; /* Make the image responsive */
   height: auto; /* Maintain aspect ratio */
+  border-radius: 50%; /* Optional: make the image circular */
+  margin-bottom: 10px; /* Space below the image */
 }
 
 /* About Section */
@@ -52,6 +58,7 @@ section {
 /* Footer Section */
 footer {
   margin-top: 10px; /* Reduce space above footer */
+  text-align: center; /* Center footer text */
 }
 
 /* Media Queries for Larger Screens */
@@ -59,11 +66,13 @@ footer {
 /* Tablets and Small Desktops */
 @media (min-width: 600px) {
   #desktop-nav {
+      display: flex; /* Ensure nav is a flex container */
       flex-direction: row; /* Align items horizontally */
       justify-content: space-between; /* Space between logo and links */
   }
 
   .nav-links {
+      display: flex; /* Ensure links are displayed in a row */
       flex-direction: row; /* Align links horizontally */
       gap: 2rem; /* Space between links */
   }
@@ -79,11 +88,24 @@ footer {
   section {
       margin: 0 10rem; /* Increase margin for sections on larger screens */
   }
+
+  .profile-info {
+      max-width: 600px; /* Limit the width of profile info */
+      text-align: center; /* Center text in profile info */
+  }
 }
 
 /* Large Desktops */
 @media (min-width: 1200px) {
   section {
       margin: 0 15rem; /* Increase margin for larger screens */
+  }
+
+  h1 {
+      font-size: 2rem; /* Increase heading size for larger screens */
+  }
+
+  p {
+      font-size: 1.1rem; /* Increase paragraph size for larger screens */
   }
 }
