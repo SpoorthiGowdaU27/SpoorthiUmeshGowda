@@ -111,7 +111,7 @@ p {
   white-space: nowrap;
   animation: smoothTyping 4s forwards; /* Smooth typing effect without steps */
 }
-.profile-image {
+#section_pic- container .profile-image {
   max-width: 0px;  /* The maximum width the image can take */
   max-height: 0px; /* The maximum height */
   width: 50%; /* Makes it responsive */
@@ -125,16 +125,7 @@ p {
 img {
   margin-top: -10px;  /* If you want to adjust further */
 }
-/* Remove animation from the image */
-#profile .section__pic-container img {
-  /* animation: slideIn 1.5s ease-out forwards;  <- Comment this out or remove it */
-}
-.about-pic {
-  width: 400px; /* Adjust width as needed */
-  height: 300px; /* Maintains aspect ratio */
-  max-width: 400%; /* Ensures responsiveness */
-  border-radius: 2rem; /* Keeps the existing border-radius */
-}
+
 
 /* TRANSITION */
 
@@ -274,6 +265,77 @@ a,
 .hamburger-icon span:first-child {
   transform: none;
 }
+/* General Styles for Navigation */
+#desktop-nav {
+  display: flex; /* Use flexbox for layout */
+  justify-content: space-between; /* Space between logo and links */
+  align-items: center; /* Center items vertically */
+  padding: 1rem 2rem; /* Padding for spacing */
+  background-color: #2f2e2e; /* Dark background color */
+  color: white; /* Text color */
+  position: sticky; /* Make it sticky on scroll */
+  top: 0; /* Stick to the top */
+  z-index: 1000; /* Ensure it stays above other content */
+}
+
+/* Logo Styles */
+.logo {
+  font-size: 2.8rem; /* Logo font size */
+  font-weight: bold; /* Bold font weight */
+}
+
+/* Navigation Links Styles */
+.nav-links {
+  list-style: none; /* Remove bullet points */
+  display: flex; /* Use flexbox for horizontal layout */
+  gap: 2rem; /* Space between links */
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+}
+
+/* Individual Link Styles */
+.nav-links li {
+  position: relative; /* For hover effect */
+}
+
+.nav-links a {
+  text-decoration: none; /* Remove underline */
+  color: white; /* Link color */
+  font-size: 1rem; /* Link font size */
+  transition: color 0.3s; /* Smooth color transition on hover */
+}
+
+/* Hover Effect for Links */
+.nav-links a:hover {
+  color: #007bff; /* Change color on hover */
+}
+
+/* HAMBURGER MENU */
+#hamburger-nav {
+  display: none; /* Hide hamburger menu by default */
+}
+
+.hamburger-menu {
+  position: relative;
+  display: inline-block;
+}
+
+.hamburger-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 24px;
+  width: 30px;
+  cursor: pointer;
+}
+
+.hamburger-icon span {
+  width: 100%;
+  height: 2px;
+  background-color: white; /* Change to white for visibility */
+  transition: all 0.3s ease-in-out;
+}
+
 
 /* SECTIONS */
 
@@ -288,7 +350,7 @@ section {
 .section-container {
   display: flex;
 }
-#sections .section__pic-container img {
+ .section__pic-container img {
   border-radius: 50%; /* Make the image circular */
   width: 500px; /* Fixed size for consistency */
   height: 500px; /* Fixed size for consistency */
@@ -296,50 +358,67 @@ section {
 }
 
 
-/* PROFILE SECTION */
 
+/* General Styles for Profile Section */
 #profile {
-  display: flex;
-  justify-content: center;
-  gap: 5rem;
-  height: 80vh;
+  display: flex; /* Use flexbox for layout */
+  justify-content: center; /* Center items */
+  align-items: center; /* Center items vertically */
+  gap: 5rem; /* Space between image and text */
+  padding: 4rem 2rem; /* Padding for spacing */
+  height: auto; /* Allow height to adjust based on content */
 }
-#profile .section__pic-container img {
+
+.section__pic-container {
+  width: 100%; /* Ensure the container takes full width */
+  max-width: 500px; /* Set a maximum width for larger screens */
+}
+
+.section__pic-container img {
   border-radius: 50%; /* Make the image circular */
-  width: 500px; /* Fixed size for consistency */
-  height: 500px; /* Fixed size for consistency */
+  width: 100%; /* Make the image responsive */
+  height: auto; /* Maintain aspect ratio */
   object-fit: cover; /* Maintain aspect ratio */
+  animation: slideIn 1.5s ease-out forwards; /* Animation for the image */
 }
 
 
-#profile .section__text {
-  align-self: center;
-  text-align: center;
+.section__text {
+  text-align: center; /* Center align text */
 }
 
-#profile .section__text p {
-  font-weight: 600;
+.section__text__p1 {
+  font-size: 1.5rem; /* Font size for introduction */
 }
 
-#profile .section__text__p1 {
-  text-align: center;
+.title {
+  font-size: 3rem; /* Font size for the name */
+  margin: 0.5rem 0; /* Margin for spacing */
 }
 
-#profile .section__text__p2 {
-  font-size: 1.75rem;
-  margin-bottom: 1rem;
+.section__text__p2 {
+  font-size: 1.75rem; /* Font size for job title */
+  margin-bottom: 1rem; /* Space below job title */
 }
 
-#profile .title {
-  font-size: 3rem;
-  text-align: center;
+.btn-container {
+  display: flex; /* Use flexbox for button layout */
+  justify-content: center; /* Center buttons */
+  gap: 1rem; /* Space between buttons */
 }
 
+/* Social Icons */
 #socials-container {
-  display: flex;
-  justify-content: center;
-  margin-top: 1rem;
-  gap: 1rem;
+  display: flex; /* Use flexbox for social icons */
+  justify-content: center; /* Center icons */
+  margin-top: 1rem; /* Space above icons */
+  gap: 1rem; /* Space between icons */
+}
+
+.icon {
+  cursor: pointer; /* Pointer cursor on hover */
+  height: 2rem; /* Set icon height */
+  width: 2rem; /* Set icon width */
 }
 
 

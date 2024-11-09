@@ -13,6 +13,54 @@ body {
   background-color: #f9f9f9; /* Light background for better contrast */
   color: #333; /* Dark text color */
 }
+/* Media Queries for Mobile Devices */
+@media (max-width: 600px) {
+  #desktop-nav {
+    display: none; /* Hide desktop nav on mobile */
+  }
+
+  #hamburger-nav {
+    display: flex; /* Show hamburger menu on mobile */
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #2f2e2e; /* Same background as desktop */
+    color: white; /* Text color */
+  }
+
+  .menu-links {
+    display: none; /* Hide menu links by default */
+    flex-direction: column; /* Stack links vertically */
+    width: 100%; /* Full width */
+    background-color: #2f2e2e; /* Background color for dropdown */
+    position: absolute; /* Position it absolutely */
+    top: 100%; /* Position below the hamburger */
+    left: 0; /* Align to the left */
+    z-index: 1000; /* Ensure it stays above other content */
+  }
+
+  .menu-links.open {
+    display: flex; /* Show menu links when open */
+  }
+
+  .menu-links a {
+    padding: 1rem; /* Add padding for touch targets */
+    text-align: center; /* Center align text */
+    color: white; /* Link color */
+  }
+}
+
+/* Optional: Adjustments for larger screens */
+@media (min-width: 601px) {
+  #hamburger-nav {
+    display: none; /* Hide hamburger menu on larger screens */
+  }
+
+  #desktop-nav {
+    display: flex; /* Show desktop nav on larger screens */
+  }
+}
+
 
 section {
   margin: 0; /* Remove default margin */
@@ -27,12 +75,24 @@ section {
   margin-bottom: 10px; /* Reduce space below profile section */
 }
 
-.profile-image {
+#section_pic- container .profile-image {
   max-width: 50px; /* Set a maximum width for the image in mobile view */
   width: 100%; /* Make the image responsive */
   height: auto; /* Maintain aspect ratio */
   border-radius: 50%; /* Optional: make the image circular */
   margin-bottom: 10px; /* Space below the image */
+}
+/* Media Queries for Mobile Devices */
+@media (max-width: 600px) {
+  .section__pic-container {
+    max-width: 300px; /* Set a maximum width for mobile */
+    width: 80%; /* Set width to a percentage for mobile */
+  }
+
+  .section__pic-container img {
+    width: 100%; /* Ensure the image fills the container */
+    height: auto; /* Maintain aspect ratio */
+  }
 }
 
 /* Media Queries for Mobile Devices */
@@ -43,6 +103,7 @@ section {
     height: auto; /* Maintain aspect ratio */
     object-fit: cover; /* Ensures the image covers its container, maintaining aspect ratio */
   }
+
 
   #profile {
     flex-direction: column; /* Stack profile elements vertically */
@@ -78,6 +139,37 @@ section {
     text-align: center; /* Center text in profile info */
   }
 }
+/* Media Queries for Mobile Devices */
+@media (max-width: 300px) {
+  #profile {
+    flex-direction: column; /* Stack items vertically */
+    gap: 2rem; /* Reduce gap between items */
+    padding: 2rem 1rem; /* Reduce padding for mobile */
+  }
+
+  .section__text__p1 {
+    font-size: 1.2rem; /* Smaller font size for introduction */
+  }
+
+  .title {
+    font-size: 2.5rem; /* Smaller font size for the name */
+  }
+
+  .section__text__p2 {
+    font-size: 1.5rem; /* Smaller font size for job title */
+  }
+
+  .btn-container {
+    flex-direction: column; /* Stack buttons vertically */
+    gap: 0.5rem; /* Reduce gap between buttons */
+  }
+
+  .icon {
+    height: 1.5rem; /* Smaller icon size for mobile */
+    width: 1.5rem; /* Smaller icon size for mobile */
+  }
+}
+
 
 /* Large Desktops */
 @media (min-width: 1200px) {
